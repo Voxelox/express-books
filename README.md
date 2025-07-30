@@ -58,7 +58,16 @@ pnpm start
 ## :pushpin: Books
 ### Get all books (with pagination)
 ```
-GET /api/books?title=Test&author=Test&page=1&limit=10
+GET /api/books
+```
+### Body:
+```
+{
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "page": 1,
+    "limit": 10
+}
 ```
 ### Response:
 ```

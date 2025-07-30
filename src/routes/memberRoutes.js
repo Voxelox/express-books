@@ -17,7 +17,7 @@ router.post('/',
 router.get('/:id/borrowings',
     [
         param('id').notEmpty().isUUID().withMessage('id is invalid'),
-        body('status').notEmpty().isString().withMessage('status is required.'),
+        body('status').notEmpty().isString().isUppercase().withMessage('status is required.'),
         body('page').isInt().withMessage('page is integer.').optional(),
         body('limit').isInt().withMessage('limit is integer.').optional()
     ], handleGetBorrowingHistory
